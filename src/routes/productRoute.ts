@@ -1,4 +1,5 @@
 import { IncomingMessage,ServerResponse } from "http";
+import { productController } from "../controller/products.controller";
 
 export const productRoute =(req:IncomingMessage,res:ServerResponse)=>{
     // console.log(req.url)
@@ -22,8 +23,11 @@ export const productRoute =(req:IncomingMessage,res:ServerResponse)=>{
     // }
     else if(method === 'GET' && url === '/products'){
     //   console.log('This is products url')
-     res.writeHead(200, {"content-type":"application/json"})
-    res.end(JSON.stringify({message:"This is products url"}))
+
+    // res.writeHead(200, {"content-type":"application/json"})
+    // res.end(JSON.stringify({message:"This is products url"}))
+
+    productController(req,res)
     }
     else{
         res.writeHead(200,{"content-type":"application/json"});
