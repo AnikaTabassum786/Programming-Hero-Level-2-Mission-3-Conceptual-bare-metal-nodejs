@@ -16,15 +16,16 @@ export const productController = (req: IncomingMessage, res:ServerResponse)=>{
        res.writeHead(200,{'content-type':'application/json'});
        res.end(JSON.stringify({message: 'This is Product route', data:products}))
    }
-   else if(method === "GET" && id!== null){
+   else if(method === "GET" && id!== null ){
     const products = readProduct();
+    console.log(products)
     const product = products.find((p:IProduct)=>p.id === id)
     res.writeHead(200,{'content-type':'application/json'});
     res.end(JSON.stringify({message: 'This is Product route', data:product}))
    }
-   else if(method === 'POST' && url === '/products'){
-        const body =''
-   }
+//    else if(method === 'POST' && url === '/products'){
+//         const body =''
+//    }
 
 }
 

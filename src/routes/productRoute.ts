@@ -21,12 +21,7 @@ export const productRoute =(req:IncomingMessage,res:ServerResponse)=>{
     // else if(url?.startsWith('/products')){
     //   console.log('This is products url')
     // }
-    else if(method === 'GET' && url === '/products'){
-    //   console.log('This is products url')
-
-    // res.writeHead(200, {"content-type":"application/json"})
-    // res.end(JSON.stringify({message:"This is products url"}))
-
+    else if(url?.startsWith ('/products')){
     productController(req,res)
     }
     else{
