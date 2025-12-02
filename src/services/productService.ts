@@ -14,4 +14,8 @@ export function readProduct(){
     return JSON.parse(data)
 }
 
+export function writeProduct(product: any){
+  fs.writeFileSync(filePath,JSON.stringify(product))
+}
+
 readProduct()

@@ -1,12 +1,1 @@
-[
-    {
-        "id":1,
-        "name":"T-shirt",
-        "color":"Red"
-    },
-    {
-        "id":2,
-        "name":"T-shirt",
-        "color":"Green"
-    }
-]
+[{"id":1,"name":"T-shirt","color":"Red"},{"id":2,"name":"T-shirt","color":"Green"},{"id":1764685156661,"name":"Jinuk"},{"id":1764685202928,"name":"Hia"},{"id":1764685496643,"name":"Mila"}]
